@@ -1,3 +1,5 @@
+version: 1
+debug: false
 database:
   host: localhost
   name: database

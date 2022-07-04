@@ -4,6 +4,7 @@ import java.util.logging.Level;
 import net.md_5.bungee.api.ProxyServer;
 import net.royalmind.library.colorizer.Colorizer;
 import net.royalmind.plugin.bungeemanager.BungeeManager;
+import net.royalmind.plugin.bungeemanager.core.configuration.ConfigurationModel;
 
 public class Logger {
     private static java.util.logging.Logger logger;
@@ -90,12 +91,12 @@ public class Logger {
      */
     public static void debug(final String texto, final Object... array)
     {
-        if (BungeeManager.debug()) {
+        if (ConfigurationModel.INSTANCE.isDEBUG()) {
             final String[] split = String.format(texto, array).split("\n");
 
             for (int length = split.length, i = 0; i < length; ++i)
             {
-                Logger.logger.info(Colorizer.translate("&r[BM]:&r ") + split[i]);
+                Logger.logger.info(Colorizer.translate("&r[BM]:&9 ") + split[i]);
             }
         }
     }
@@ -106,7 +107,7 @@ public class Logger {
      */
     public static void debugError(final String texto, final Object... array)
     {
-        if (BungeeManager.debug()) { error(String.format(texto, array), new Object[0]); }
+        if (ConfigurationModel.INSTANCE.isDEBUG()) { error(String.format(texto, array), new Object[0]); }
     }
 
     public static String getLine() { return Colorizer.translate("&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a=&e-&a="); }

@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ConfigValue {
-    String value();
+public @interface SettingsField {
+    String path();
     Class<?> type();
 }
