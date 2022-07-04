@@ -1,0 +1,6 @@
+name: BungeeManager
+version: '${project.version}'
+description: Bungeecord Management System.
+author: CharlyZest
+main: net.royalmind.plugin.bungeemanager.BungeeManager
+
