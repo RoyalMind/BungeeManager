@@ -13,7 +13,7 @@ public final class BungeeManager extends Plugin {
     private static BungeeManager PLUGIN_INSTANCE;
     private final Gson GSON;
     private final ConfigurationManager configurationManager;
-    @Getter @Setter(AccessLevel.PRIVATE)
+    @Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE)
     private ConfigurationModel configuration;
 
     public BungeeManager() {

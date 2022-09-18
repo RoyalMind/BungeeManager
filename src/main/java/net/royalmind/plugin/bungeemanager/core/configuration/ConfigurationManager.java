@@ -114,8 +114,8 @@ public class ConfigurationManager {
 
                         yamlConfiguration.set(settingsField.path(), fieldValue);
                     }
-
-                } catch (Exception ex) {
+                }
+                catch (Exception ex) {
                     Logger.error("No se pudo establecer el valor de configuración para el campo '"
                             + field.getName()
                             + "' en "
